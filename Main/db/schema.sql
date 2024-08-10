@@ -11,7 +11,7 @@ CREATE TABLE doctors (
 CREATE TABLE reviews (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     doctors_id INT,
-    nurses TEXT NOT NULL,
+    reviews TEXT NOT NULL,
     FOREIGN KEY (doctors_id)
     REFERENCES doctors(id)
     ON DELETE SET NULL

@@ -1,5 +1,5 @@
-SELECT doctors.doctors_name AS doctors, nurses.nurses
-FROM nurses
+SELECT doctors.doctors_name AS doctors, reviews.reviews
+FROM reviews
 LEFT JOIN doctors
-ON nurses.doctors_id = doctors.id
+ON reviews.doctors_id = doctors.id
 ORDER BY doctors.doctors_name;
