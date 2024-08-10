@@ -1,16 +1,27 @@
-INSERT INTO movies (movie_name)
-VALUES ("Lion King"),
-       ("The Godfather"),
-       ("West Side Story"),
-       ("Parasite"),
-       ("The Wizard of Oz");
+INSERT INTO doctors (doctors_name)
+VALUES ("Dr. Acula"),
+       ("Dr. Pepper"),
+       ("Dr. Jekyll"),
+       ("Dr. Frankenstein"),
+       ("Dr. Who");
+       
 
-INSERT INTO reviews (movie_id, review)
-VALUES (1, "Zazu is underrated. Give that hornbill a sequel!"),
-       (2, "I'm gonna make him an offer you can't refuse, watch this movie"),
-       (1, "Scar is the lion everyone loves to hate"),
-       (3, "Ten years of ballet and three years of tap to join a gang in this neighborhood"),
-       (5, "The tin man gave a metallic, hollow performance"),
-       (1, "Hakuna matata"),
-       (5, "Those flying monkeys are nightmare fuel!");
+INSERT INTO nurses (doctors_id, reviews)
+VALUES 
+         (1, "Dr. Acula is a real pain in the neck"),
+         (2, "Dr. Pepper is the real thing"),
+         (3, "Dr. Jekyll is a real split personality"),
+         (4, "Dr. Frankenstein is a real monster"),
+         (5, "Dr. Who is a real mystery"),
+         (1, "Dr. Acula is a real bloodsucker"),
+         (2, "Dr. Pepper is a real soda jerk"),
+         (3, "Dr. Jekyll is a real head case"),
+         (4, "Dr. Frankenstein is a real stitch"),
+         (5, "Dr. Who is a real time traveler"),
+         (1, "Dr. Acula is a real batman"),
+         (2, "Dr. Pepper is a real pop star"),
+         (3, "Dr. Jekyll is a real mad scientist"),
+         (4, "Dr. Frankenstein is a real bolt from the blue"),
+         (5, "Dr. Who is a real phone booth");
+
        
