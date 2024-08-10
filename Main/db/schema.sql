@@ -1,18 +1,18 @@
-DROP DATABASE IF EXISTS movies_db;
-CREATE DATABASE movies_db;
+DROP DATABASE IF EXISTS doctors_db;
+CREATE DATABASE doctors_db;
 
-USE movies_db;
+USE doctors_db;
 
-CREATE TABLE movies (
+CREATE TABLE doctors (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  movie_name VARCHAR(100) NOT NULL
+  doctors_name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE reviews (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    movie_id INT,
-    review TEXT NOT NULL,
-    FOREIGN KEY (movie_id)
-    REFERENCES movies(id)
+    doctors_id INT,
+    nurses TEXT NOT NULL,
+    FOREIGN KEY (doctors_id)
+    REFERENCES doctors(id)
     ON DELETE SET NULL
 );
