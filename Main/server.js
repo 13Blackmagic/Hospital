@@ -93,7 +93,7 @@ app.get('/api/doctors-reviews', (req, res) => {
   });
 });
 
-// BONUS: Update review name
+// Update review name
 app.put('/api/review/:id', (req, res) => {
   const sql = `UPDATE reviews SET review = ? WHERE id = ?`;
   const params = [req.body.review, req.params.id];
@@ -103,7 +103,7 @@ app.put('/api/review/:id', (req, res) => {
       res.status(400).json({ error: err.message });
     } else if (!result.affectedRows) {
       res.json({
-        message: 'Movie not found'
+        message: 'Doctor not found!'
       });
     } else {
       res.json({
