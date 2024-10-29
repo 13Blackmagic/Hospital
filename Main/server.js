@@ -40,9 +40,9 @@ app.post('/api/new-doctor', ({ body }, res) => {
   });
 });
 
-// Read all movies
-app.get('/api/movies', (req, res) => {
-  const sql = `SELECT id, movie_name AS title FROM movies`;
+// Read all doctors
+app.get('/api/doctors', (req, res) => {
+  const sql = `SELECT id, doctors_name AS title FROM doctors`;
   
   db.query(sql, (err, rows) => {
     if (err) {
@@ -56,9 +56,9 @@ app.get('/api/movies', (req, res) => {
   });
 });
 
-// Delete a movie
-app.delete('/api/movie/:id', (req, res) => {
-  const sql = `DELETE FROM movies WHERE id = ?`;
+// Delete a doctor
+app.delete('/api/doctors/:id', (req, res) => {
+  const sql = `DELETE FROM doctors WHERE id = ?`;
   const params = [req.params.id];
   
   db.query(sql, params, (err, result) => {
@@ -66,7 +66,7 @@ app.delete('/api/movie/:id', (req, res) => {
       res.statusMessage(400).json({ error: res.message });
     } else if (!result.affectedRows) {
       res.json({
-      message: 'Movie not found'
+      message: 'Doctor not found!'
       });
     } else {
       res.json({
