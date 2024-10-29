@@ -78,9 +78,9 @@ app.delete('/api/doctors/:id', (req, res) => {
   });
 });
 
-// Read list of all reviews and associated movie name using LEFT JOIN
-app.get('/api/movie-reviews', (req, res) => {
-  const sql = `SELECT movies.movie_name AS movie, reviews.review FROM reviews LEFT JOIN movies ON reviews.movie_id = movies.id ORDER BY movies.movie_name;`;
+// Read list of all reviews and associated doctors names using LEFT JOIN
+app.get('/api/doctors-reviews', (req, res) => {
+  const sql = `SELECT doctors.doctors_name AS doctors, reviews.review FROM reviews LEFT JOIN doctors ON reviews.doctors_id = doctors.id ORDER BY doctors.doctors_name;`;
   db.query(sql, (err, rows) => {
     if (err) {
       res.status(500).json({ error: err.message });
