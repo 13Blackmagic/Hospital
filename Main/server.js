@@ -17,16 +17,16 @@ const db = mysql.createConnection(
     user: 'root',
     // TODO: Add MySQL password here
     password: '',
-    database: 'movies_db'
+    database: 'doctors_db'
   },
-  console.log(`Connected to the movies_db database.`)
+  console.log(`Connected to the doctors_db database.`)
 );
 
-// Create a movie
-app.post('/api/new-movie', ({ body }, res) => {
-  const sql = `INSERT INTO movies (movie_name)
+// Add a new doctor
+app.post('/api/new-doctor', ({ body }, res) => {
+  const sql = `INSERT INTO doctors (doctors_name)
     VALUES (?)`;
-  const params = [body.movie_name];
+  const params = [body.doctor_name];
   
   db.query(sql, params, (err, result) => {
     if (err) {
